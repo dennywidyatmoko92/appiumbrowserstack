@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.7 on win32)" generated="20210902 15:07:11.471" rpa="false">
+<suite id="s1" name="Browserstackappium" source="C:\Users\dennypc\eclipse-workspace\browserstackappium">
+<suite id="s1-s1" name="TC 02 Login" source="C:\Users\dennypc\eclipse-workspace\browserstackappium\TC_02_Login.robot">
+<kw name="define apps" library="sbs" type="setup">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>http://${browserstack_userName}:${browserstack_accessKey}@hub.browserstack.com/wd/hub</arg>
+</arguments>
+<assign>
+<var>${remoteUrl}</var>
+</assign>
+<msg timestamp="20210902 15:07:11.825" level="INFO">${remoteUrl} = http://dennythree_04ITlG:c7WzMUEqoj9FEMprKsbT@hub.browserstack.com/wd/hub</msg>
+<status status="PASS" starttime="20210902 15:07:11.824" endtime="20210902 15:07:11.826"></status>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>${remoteUrl}</arg>
+<arg>alias=Sebangsa</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>deviceName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>autoGrantPermissions=${autoGrantPermissions}</arg>
+</arguments>
+<status status="PASS" starttime="20210902 15:07:11.826" endtime="20210902 15:07:33.202"></status>
+</kw>
+<status status="PASS" starttime="20210902 15:07:11.824" endtime="20210902 15:07:33.203"></status>
+</kw>
+<test id="s1-s1-t1" name="login">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>com.sebangsa.arena:id/navigation_account</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" starttime="20210902 15:07:33.205" endtime="20210902 15:07:43.674"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>com.sebangsa.arena:id/navigation_account</arg>
+</arguments>
+<msg timestamp="20210902 15:07:43.678" level="INFO">Clicking element 'com.sebangsa.arena:id/navigation_account'.</msg>
+<status status="PASS" starttime="20210902 15:07:43.674" endtime="20210902 15:07:44.934"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.sebangsa.arena:id/btn_login</arg>
+</arguments>
+<msg timestamp="20210902 15:07:44.937" level="INFO">Clicking element 'id=com.sebangsa.arena:id/btn_login'.</msg>
+<status status="PASS" starttime="20210902 15:07:44.935" endtime="20210902 15:07:45.771"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>id=com.sebangsa.arena:id/username</arg>
+</arguments>
+<status status="PASS" starttime="20210902 15:07:45.772" endtime="20210902 15:07:47.179"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=com.sebangsa.arena:id/username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20210902 15:07:47.186" level="INFO">Typing text 'browserstack' into text field 'id=com.sebangsa.arena:id/username'</msg>
+<status status="PASS" starttime="20210902 15:07:47.180" endtime="20210902 15:07:48.799"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=com.sebangsa.arena:id/password</arg>
+<arg>123456qwe</arg>
+</arguments>
+<msg timestamp="20210902 15:07:48.803" level="INFO">Typing text '123456qwe' into text field 'id=com.sebangsa.arena:id/password'</msg>
+<status status="PASS" starttime="20210902 15:07:48.799" endtime="20210902 15:07:49.645"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=com.sebangsa.arena:id/button_login</arg>
+</arguments>
+<msg timestamp="20210902 15:07:49.651" level="INFO">Clicking element 'id=com.sebangsa.arena:id/button_login'.</msg>
+<status status="PASS" starttime="20210902 15:07:49.645" endtime="20210902 15:07:51.035"></status>
+</kw>
+<status status="PASS" starttime="20210902 15:07:33.203" endtime="20210902 15:07:51.037" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210902 15:07:11.549" endtime="20210902 15:07:51.042"></status>
+</suite>
+<status status="PASS" starttime="20210902 15:07:11.513" endtime="20210902 15:07:51.054"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Browserstackappium">Browserstackappium</stat>
+<stat pass="1" fail="0" id="s1-s1" name="TC 02 Login">Browserstackappium.TC 02 Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
