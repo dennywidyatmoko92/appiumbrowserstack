@@ -7,8 +7,8 @@ ${ANDROID_APP}                bs://005223872275094f6be7f48a90fd66db6fce885b
 ${ANDROID_PLATFORM_NAME}      Android
 ${ANDROID_PLATFORM_VERSION}   9.0
 ${autoGrantPermissions}    true
-${browserstack_userName}       dennythree_04ITlG
-${browserstack_accessKey}      c7WzMUEqoj9FEMprKsbT
+${browserstack_userName}       YourUserName
+${browserstack_accessKey}      YourAccessKey
 
 
 
